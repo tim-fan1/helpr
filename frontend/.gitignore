@@ -1,0 +1,9 @@
+# .DS_Store
+.DS_Store
+
+# .json files.
+*.json
+
+# pycache files.
+*.pyc
+
