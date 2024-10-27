@@ -31,10 +31,25 @@ window.onload = function () {
 	// fill in requestList.
 	loadQueue();
 
+	const reprioritiseButton = document.getElementById("reprioritiseButton");
+	// add event listener for reprioritise button click.
+	reprioritiseButton.addEventListener("click", event => {
+		event.preventDefault();
+		// send request to backend.
+		let xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("POST", `${backendURL}/reprioritise`, true);
+		xmlhttp.onreadystatechange = function () {
+			// when request has finished refill requestList.
+			if (this.readyState === 4 && this.status === 200) {
+				loadQueue();
+			}
+		};
+		xmlhttp.send();
+	});
+
 	// disable end session button if current tutor is not admin.
 	const endSessionButton = document.getElementById("endSessionButton");
 	endSessionButton.disabled = (zid !== "admin");
-
 	// add event listener for end session button click.
 	endSessionButton.addEventListener("click", event => {
 		event.preventDefault();
