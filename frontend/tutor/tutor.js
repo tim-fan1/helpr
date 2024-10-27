@@ -2,9 +2,7 @@
 // global variables.
 ///////////////////////////////////////////////////////////
 
-// TODO: Make a new pythonanywhere account to run this app.
-username = "MISSINGNO";
-backendURL = `https://${username}.pythonanywhere.com`;
+const backendURL = "http://127.0.0.1:8080";
 
 ///////////////////////////////////////////////////////////
 // bootstrap.

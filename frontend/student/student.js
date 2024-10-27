@@ -2,9 +2,7 @@
 // global variables.
 ///////////////////////////////////////////////////////////
 
-// TODO: Make a new pythonanywhere account to run this app.
-username = "MISSINGNO";
-backendURL = `https://${username}.pythonanywhere.com`;
+const backendURL = "http://127.0.0.1:8080";
 
 ///////////////////////////////////////////////////////////
 // bootstrap.
@@ -40,6 +38,7 @@ window.onload = function() {
 			"zid": zid,
 			"description": description,
 		});
+		console.log("here");
 		// send request to backend.
 		let xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("POST", `${backendURL}/make_request`, true);

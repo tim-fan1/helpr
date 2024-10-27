@@ -6,3 +6,6 @@
 
 # pycache files.
 *.pyc
+
+# venv.
+venv
